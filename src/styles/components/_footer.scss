@@ -1,0 +1,43 @@
+.footer {
+  --bs-secondary-color: rgba(255, 255, 255, 0.75);
+  --bs-heading-color: var(--bs-secondary-color);
+  --bs-border-color: #495057;
+
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  background-color: var(--bs-secondary);
+  color: var(--bs-secondary-color);
+
+  .footer-brand {
+    max-height: 9rem;
+    margin-top: -1rem;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+
+    --bs-nav-link-padding-y: 0;
+    --bs-nav-link-padding-x: 0;
+    --bs-nav-link-color: rgba(255, 255, 255, 0.75);
+    --bs-nav-link-hover-color: rgba(255, 255, 255, 1);
+
+    > i {
+      font-size: 1rem;
+    }
+
+
+    > span {
+      margin-left: 0.5rem;
+      margin-top: -2px; // fix vertical alignment
+    }
+  }
+}

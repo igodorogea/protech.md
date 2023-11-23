@@ -3,13 +3,23 @@
   "version": "1.0.0",
   "description": "Protech MD",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "start": "rimraf public && cross-env ELEVENTY_ENV=development eleventy --serve --incremental --quiet",
+    "build": "rimraf public && eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "npm ci && npm start",
+    "compileTrigger": "save"
+  },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "cross-env": "^7.0.3",
+    "eleventy-plugin-rev": "^2.0.0",
+    "eleventy-sass": "^2.2.3",
+    "rimraf": "^5.0.5"
   }
 }
